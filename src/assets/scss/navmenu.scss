@@ -1,0 +1,50 @@
+@import '_colors';
+
+.navmenu {
+  background-color: $primary-color !important;
+  padding: 0 !important;
+
+  .nav-link {
+    color: #f0f0f0 !important;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: #1a1a40;
+    }
+  }
+
+  .dropdown-menu.show {
+    margin-top: -1px !important;
+    border-radius: 0;
+    background-color: #1a1a40;
+
+    a {
+      color: #f0f0f0;
+
+      &:hover {
+        color: #1a1a40;
+      }
+    }
+  }
+
+  .dropdown-toggle::after {
+    margin-left: 10px;
+  }
+
+  .nav-item:hover {
+    .dropdown-menu {
+      display: block !important;
+      margin-top: -1px !important;
+      border-radius: 0;
+      background-color: #1a1a40;
+
+      a {
+        color: #f0f0f0;
+
+        &:hover {
+          color: #1a1a40;
+        }
+      }
+    }
+  }
+}

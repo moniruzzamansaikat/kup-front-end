@@ -1,0 +1,32 @@
+@import '_colors';
+
+.news_ticker {
+  background-color: $dark-color;
+  position: relative;
+  color: #f0f0f0;
+
+  .news_ticker_title {
+    position: absolute;
+    background-color: $secondary-color;
+    font-weight: 800;
+    height: 100%;
+    color: #f0f0f0;
+    z-index: 101010;
+    padding: 0 1rem;
+    padding-top: 7px;
+    border-right: 5px double #f0f0f0;
+  }
+
+  marquee {
+    padding: 0;
+    height: 30px;
+    padding-top: 5px;
+  }
+
+  p {
+    display: inline-block;
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-right: 2rem;
+  }
+}

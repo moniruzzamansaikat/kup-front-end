@@ -1,0 +1,59 @@
+@import '_colors';
+
+.notices {
+  .card-body {
+    border-left: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+
+    .notice_item {
+      border-bottom: 1px solid;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    .notice {
+      display: grid;
+      grid-template-columns: 100px auto;
+
+      .date {
+        padding: 10px;
+        background-color: $primary-color;
+        flex-direction: column;
+        align-items: center;
+        align-self: baseline;
+        color: #f0f0f0;
+        margin-right: 10px;
+        text-align: center;
+
+        .day {
+          font-size: 1.5rem;
+          display: block;
+          margin: 0;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .btn {
+      position: relative;
+      margin-left: 100%;
+      color: #f0f0f0;
+      transform: translateX(-100%);
+      font-size: 12px;
+      min-width: 90px;
+      border-radius: 0;
+      color: $primary-color;
+      padding: 4px 6px !important;
+      font-weight: 700;
+    }
+  }
+}
