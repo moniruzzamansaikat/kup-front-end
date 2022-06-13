@@ -9,7 +9,7 @@ import slider4 from 'assets/images/slides/slider3.jpg'
 import slider5 from 'assets/images/slides/slider4.jpg'
 
 function Slider() {
-  const [slides, setSlides] = useState([slider1, slider2, slider3, slider4, slider5])
+  const [slides] = useState([slider1, slider2, slider3, slider4, slider5])
 
   return (
     <Carousel className="slider" indicators={false}>

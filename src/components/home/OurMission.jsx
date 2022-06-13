@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card} from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
 function OurMission() {
   return (
@@ -9,6 +9,10 @@ function OurMission() {
       </Card.Header>
       <Card.Body>
         <ul>
+          <li>lorem ipsum dolor set </li>
+          <li>lorem ipsum dolor set </li>
+          <li>lorem ipsum dolor set </li>
+          <li>lorem ipsum dolor set </li>
           <li>lorem ipsum dolor set </li>
         </ul>
       </Card.Body>

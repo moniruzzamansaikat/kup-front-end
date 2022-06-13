@@ -1,0 +1,20 @@
+@import '../_colors';
+
+.quotes {
+  padding-right: 0;
+  
+  .items {
+    max-height: 500px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: transparent; /* or add it to the track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $primary-color;
+    }
+  }
+}

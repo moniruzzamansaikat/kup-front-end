@@ -2,7 +2,7 @@
 @import '_utils';
 @import '_colors';
 
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 
 *{ 
   box-sizing: border-box;
@@ -21,6 +21,7 @@ img {
   border-radius: 0;
   border: 0;
   background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   .card-header {
     background-color: $primary-color;
@@ -48,4 +49,19 @@ img {
     border-radius: 0;
     font-size: 1rem;
   }
+}
+
+[class^="col"] {
+  display: inline !important;
+  display: none;
+}
+
+.page_title {
+    background: linear-gradient(to right, #4b5d67e3, #2d3a41, #4b5d67c2);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1rem 0;
 }
