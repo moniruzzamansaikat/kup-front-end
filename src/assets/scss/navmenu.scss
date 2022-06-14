@@ -8,6 +8,15 @@
     border: 0;
     box-shadow: 0 0 0 !important;
     color: #fff;
+
+    #close_button {
+    }
+
+    &.collapsed {
+      #button {
+        display: none;
+      }
+    }
   }
 
   .nav-link {
@@ -15,8 +24,13 @@
     font-size: 14px;
     font-weight: 600;
 
+    &.active {
+      color: #fff !important;
+      background-color: $secondary-color !important;
+    }
+
     &:hover {
-      color: $secondary-color !important;
+      color: $tertiary-color !important;
 
       &:after {
         transform: rotate(-180deg);
@@ -46,7 +60,7 @@
       transform: rotate(-45deg);
     }
 
-    @media (max-width: 520px){
+    @media (max-width: 520px) {
       &:before {
         display: none;
         visibility: hidden;
@@ -69,7 +83,6 @@
         border-bottom: 1px solid gray;
       }
     }
-    
   }
 
   .dropdown:hover {
@@ -77,5 +90,4 @@
       display: block;
     }
   }
-
 }

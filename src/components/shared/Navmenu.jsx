@@ -1,17 +1,28 @@
-import React, {useEffect} from 'react'
-import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import {Link} from 'react-router-dom';
+import React from 'react'
+import { Container, Navbar, Nav, NavDropdown, Image } from 'react-bootstrap'
+import { Link, useLocation } from 'react-router-dom'
+import menu_bar from 'assets/images/menu_bar.svg'
+import menu_bar_close from 'assets/images/menu_bar_close.svg'
 import 'assets/scss/navmenu.scss'
 
 function Navmenu() {
+  const { pathname } = useLocation()
+
   return (
     <Navbar expand="lg" className="navmenu">
       <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle>
+          <Image src={menu_bar} alt="logo" id="button" />
+          <Image src={menu_bar_close} alt="logo" id="close_button" />
+        </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About Us</Link>
+            <Link to="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>
+              Home
+            </Link>
+            <Link to="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`}>
+              About Us
+            </Link>
             <NavDropdown title="Adminstration" id="adminstration-dropdown" renderMenuOnMount={true}>
               <NavDropdown.Item href="#action/3.1">President</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Headmaster</NavDropdown.Item>
@@ -36,12 +47,25 @@ function Navmenu() {
               <NavDropdown.Item href="#action/3.4">Borad</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Gallery" id="gallery-dropdown" renderMenuOnMount={true}>
-              <Link to="/image_gallery" className="dropdown-item">Image Gallery</Link>
-              <Link to="/video_gallery" className="dropdown-item">Video Gallery</Link>
+              <Link to="/image_gallery" className="dropdown-item">
+                Image Gallery
+              </Link>
+              <Link to="/video_gallery" className="dropdown-item">
+                Video Gallery
+              </Link>
             </NavDropdown>
-            <Link to="/notice" className="nav-link">Notice</Link>
-            <Link to="/mujib_corner" className="nav-link">Mujib Conrner</Link>
-            <Link to="/login" className="nav-link">Login</Link>
+            <Link to="/notice" className={`nav-link ${pathname === '/notice' ? 'active' : ''}`}>
+              Notice
+            </Link>
+            <Link
+              to="/mujib_corner"
+              className={`nav-link ${pathname === '/mujib_corner' ? 'active' : ''}`}
+            >
+              Mujib Conrner
+            </Link>
+            <Link to="/login" className={`nav-link ${pathname === '/login' ? 'active' : ''}`}>
+              Login
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

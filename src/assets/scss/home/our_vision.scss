@@ -1,0 +1,29 @@
+@import '../_colors';
+
+.our_vision {
+  .list-group {
+    .list-group-item {
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgb(194, 194, 194);
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+
+        &:hover {
+          color: $secondary-color;
+          text-decoration: underline;
+        }
+
+        i {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

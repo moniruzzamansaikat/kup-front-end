@@ -42,12 +42,13 @@
 @media (max-width: 768px) {
   .top_banner {
     .container {
-    grid-template-columns: 1fr;
-    font-size: 10px;
+      grid-template-columns: 1fr;
+      font-size: 10px;
     }
-    
+
     .card-body {
       padding: 0;
+      padding-top: 0.5rem;
     }
 
     img {

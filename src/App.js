@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'assets/scss/app.scss'
+import Footer from 'components/shared/Footer'
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           <Route path="/mujib_corner" element={<MujibCornerPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Routes>
+
+        <Footer />
       </Router>
     </>
   )

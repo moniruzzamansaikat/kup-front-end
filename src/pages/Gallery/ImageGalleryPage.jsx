@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Container, Row, Col, Image} from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 import FsLightbox from 'fslightbox-react'
 import 'assets/scss/pages/gallery_page.scss'
 import img1 from 'assets/images/img_gallery/1.jpg'
@@ -52,25 +52,25 @@ function ImageGalleryPage() {
     img22,
     img23,
     img24,
-  ]);
-  
+  ])
+
   return (
     <Container className="gallery_page">
       <p className="page_title">Image Gallery</p>
       <Row>
-        {
-          images.map(image => (<Col md={3} className="mb-4" key={image}>
+        {images.map((image) => (
+          <Col lg={3} md={4} sm={6} className="mb-4" key={image}>
             <div className="img_box">
               <Image src={image} lazy="true" />
             </div>
-          </Col>))
-        }
+          </Col>
+        ))}
       </Row>
       <FsLightbox
         sources={[
           'https://i.imgur.com/fsyrScY.jpg',
           'https://www.youtube.com/watch?v=3nQNiWdeH2Q',
-          'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+          'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
         ]}
       />
     </Container>
