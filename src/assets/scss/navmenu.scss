@@ -4,25 +4,41 @@
   background-color: $primary-color !important;
   padding: 1rem !important;
 
+  .mobile_logo {
+    width: 80px;
+  }
+
   .navbar-toggler {
     border: 0;
     box-shadow: 0 0 0 !important;
+    padding: 0;
     color: #fff;
+    margin-bottom: 10px;
 
-    #close_button {
+    &:not(.collapsed) {
+      i.fa-bars {
+        display: none;
+      }
     }
 
     &.collapsed {
-      #button {
+      i.fa-xmark {
         display: none;
       }
+    }
+
+    i {
+      color: #fff;
+      font-size: 1.5rem;
     }
   }
 
   .nav-link {
     color: #fff !important;
     font-size: 14px;
+    padding-left: 10px !important;
     font-weight: 600;
+    cursor: pointer !important;
 
     &.active {
       color: #fff !important;

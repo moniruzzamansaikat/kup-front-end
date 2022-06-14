@@ -1,7 +1,7 @@
 import LoginForm from 'components/forms/LoginForm'
 import Meta from 'components/shared/Meta'
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 
 function LoginPage() {
   return (
@@ -13,7 +13,9 @@ function LoginPage() {
       <main>
         <Row>
           <Col md={4} className="offset-md-4 my-3">
-            <LoginForm />
+            <Card className="p-3">
+              <LoginForm />
+            </Card>
           </Col>
         </Row>
       </main>

@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container, Navbar, Nav, NavDropdown, Image } from 'react-bootstrap'
 import { Link, useLocation } from 'react-router-dom'
-import menu_bar from 'assets/images/menu_bar.svg'
-import menu_bar_close from 'assets/images/menu_bar_close.svg'
+import logo from 'assets/images/school_logo.png'
 import 'assets/scss/navmenu.scss'
 
 function Navmenu() {
@@ -11,9 +10,13 @@ function Navmenu() {
   return (
     <Navbar expand="lg" className="navmenu">
       <Container>
-        <Navbar.Toggle>
-          <Image src={menu_bar} alt="logo" id="button" />
-          <Image src={menu_bar_close} alt="logo" id="close_button" />
+        <Link to="/" className="mobile_logo d-lg-none">
+          <Image src={logo} alt="Logo" />
+        </Link>
+
+        <Navbar.Toggle className="ms-auto">
+          <i className="fa fa-bars"></i>
+          <i className="fa-solid fa-xmark"></i>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">

@@ -65,3 +65,15 @@ img {
     font-weight: bold;
     margin: 1rem 0;
 }
+
+.form-control {
+  border-radius: 0;
+  border-color: $primary-color;
+
+  &:focus {
+    box-shadow: 0 0 0;
+    border-color: $primary-color;
+  }
+}
+
+ 

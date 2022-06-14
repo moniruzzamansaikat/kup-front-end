@@ -1,5 +1,6 @@
+import Button from 'components/shared/Button'
 import React, { useState } from 'react'
-import { Button, Form, FormControl } from 'react-bootstrap'
+import { Form, FormControl } from 'react-bootstrap'
 
 function LoginForm() {
   const [email, setEmail] = useState('')
@@ -8,7 +9,7 @@ function LoginForm() {
   return (
     <Form>
       <Form.Group className="mb-3">
-        <Form.Label>Email Addres</Form.Label>
+        <Form.Label>Email Address</Form.Label>
         <FormControl
           type="email"
           placeholder="Enter your email"
@@ -28,7 +29,7 @@ function LoginForm() {
         />
       </Form.Group>
       <Form.Group>
-        <Button type="submit">Login</Button>
+        <Button>Login</Button>
       </Form.Group>
     </Form>
   )

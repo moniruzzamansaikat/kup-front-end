@@ -1,0 +1,17 @@
+@import '../_colors';
+
+.btn {
+  box-shadow: 0 0 0 !important;
+  display: none;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: $primary-color !important;
+
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+
+  &.primary {
+    background-color: red;
+  }
+}

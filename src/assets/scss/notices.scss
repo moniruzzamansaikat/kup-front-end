@@ -47,7 +47,6 @@
     .btn {
       position: relative;
       margin-left: 100%;
-      color: #f0f0f0;
       transform: translateX(-100%);
       font-size: 12px;
       min-width: 90px;
@@ -55,8 +54,6 @@
       padding: 4px 6px !important;
       font-weight: 700;
       box-shadow: 0 0 0 !important;
-      color: $primary-color;
-      background-color: transparent;
 
       &:hover {
         color: #f0f0f0;
